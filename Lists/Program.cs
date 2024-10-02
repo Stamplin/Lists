@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 //task 1 - Reading in Color
 
@@ -28,5 +28,25 @@ Console.ReadLine();
 
 
 //task 2 - Random Numbers
+int min, max, num, gen;
+List<int> randomNumbers = new List<int>();
+Console.WriteLine("How many numbers do you need?");
+Int32.TryParse(Console.ReadLine(), out num);
+Console.WriteLine("Enter a maximum value:");
+if (max > num)
+{
+    Console.WriteLine("Your max is higher than the number you picked.");
+}
+Int32.TryParse(Console.ReadLine(), out max);
+Console.WriteLine("Enter a minimum value:");
+Int32.TryParse(Console.ReadLine(), out min);
 
-List<int> ints = new List<int>();   
+
+gen = generator.Next(min, max);
+
+for (int i = min; i < max; i++) 
+{
+    randomNumbers.Add(gen);
+}
+
+Console.WriteLine(randomNumbers.ToArray());
