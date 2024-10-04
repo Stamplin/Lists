@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 //task 1 - Reading in Color
@@ -64,9 +65,33 @@ for (int i = 0; i < randomNumbers.Count; i++)
     if (randomNumbers[i] == countNum)
         randomNumbers[i] = 0; //count how many of the num is in the list and replace them witho zero
 }
+Console.WriteLine("list after replacing numbers with zero:");
+Console.WriteLine(string.Join(", ", randomNumbers));
+//4 - display the new one
+Console.WriteLine("list after modifying:");
+Console.WriteLine(string.Join(", ", randomNumbers));
+//5 reset value
+for (int i = 0; i < randomNumbers.Count; i++)
+{
+    randomNumbers[i] = 0;
+}
+Console.WriteLine("list after resetting the values to zero:");
+Console.WriteLine(string.Join(", ", randomNumbers));
+//6 new print again
+Console.WriteLine("list after resetting:");
+Console.WriteLine(string.Join(", ", randomNumbers));
+// 7. new random num
+for (int i = 0; i < randomNumbers.Count; i++)
+{
+    randomNumbers[i] = generator.Next(min, max + 1);
+}
+Console.WriteLine("list after refilling with new random numbers:");
+Console.WriteLine(string.Join(", ", randomNumbers));
 
-
-
-
+// 8 last printing 
+Console.WriteLine("the final list:");
+Console.WriteLine(string.Join(", ", randomNumbers));
 
 Console.ReadLine();
+
+
